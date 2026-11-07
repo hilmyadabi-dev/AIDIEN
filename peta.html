@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Peta Kartografi Budaya Nusantara AKSARA — Eksplorasi interaktif warisan seni, kearifan adat, dan filosofi 7 gugus kepulauan Indonesia.">
+  <title>Kartografi Budaya Nusantara | AKSARA</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <link rel="icon" href="assets/images/aksara-emblem.png" type="image/png">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="aksara-header" role="banner">
+    <div class="aksara-container header-container">
+      <a href="index.html" class="header-brand" aria-label="Beranda AKSARA">
+        <div class="brand-symbol">
+          <img src="assets/images/aksara-emblem.png" alt="">
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">AKSARA</span>
+          <span class="brand-tagline">Pusaka Nusantara</span>
+        </div>
+      </a>
+
+      <nav class="header-nav" id="header-nav" role="navigation" aria-label="Menu Utama">
+        <a href="index.html" class="nav-link">Beranda</a>
+        <a href="galeri.html" class="nav-link">Penjelajah Budaya</a>
+        <a href="peta.html" class="nav-link active">Peta Kartografi</a>
+        <a href="kronik.html" class="nav-link">Lini Masa</a>
+        <a href="tentang.html" class="nav-link">Preservasi & Tim</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn-soundscape" id="soundscape-btn" aria-label="Nyalakan alunan suara gamelan" title="Alunan Gamelan Pentatonik">
+          <div class="sound-waves" aria-hidden="true">
+            <span class="sound-bar"></span>
+            <span class="sound-bar"></span>
+            <span class="sound-bar"></span>
+          </div>
+          <span>Alunan Suara</span>
+        </button>
+
+        <button class="btn-menu-toggle" id="menu-toggle-btn" aria-label="Buka menu navigasi" aria-expanded="false">
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding-top: calc(var(--header-height) + 2rem); min-height: 85vh;">
+    
+    <section class="aksara-container" style="padding-bottom: 4rem;">
+      
+      <!-- Section Header -->
+      <div style="text-align: center; max-width: 800px; margin: 0 auto 2.5rem;">
+        <span class="subtitle-editorial" style="justify-content: center;">Kartografi Interaktif Kepulauan</span>
+        <h1 class="title-section" style="font-size: clamp(2.4rem, 4.5vw, 3.8rem);">Peta Pusaka 7 Wilayah Nusantara</h1>
+        <p class="lead-text" style="margin: 0 auto;">
+          Jelajahi jalinan ruang dan tradisi. Setiap gugus pulau menyimpan kearifan beradaptasi dengan alam, menghasilkan bentuk arsitektur, ragam hias wastra, dan orkestrasi nada yang unik tiada tara di dunia.
+        </p>
+
+        <!-- Quick Region Selector Pills -->
+        <div class="filter-bar" style="margin-top: 1.75rem;">
+          <button class="filter-btn" data-map-region="sumatera">Sumatera</button>
+          <button class="filter-btn active" data-map-region="jawa">Jawa</button>
+          <button class="filter-btn" data-map-region="bali-nusa">Bali &amp; Nusa Tenggara</button>
+          <button class="filter-btn" data-map-region="kalimantan">Kalimantan</button>
+          <button class="filter-btn" data-map-region="sulawesi">Sulawesi</button>
+          <button class="filter-btn" data-map-region="maluku">Maluku</button>
+          <button class="filter-btn" data-map-region="papua">Papua</button>
+        </div>
+      </div>
+
+      <!-- Main Map & Detail Layout -->
+      <div class="map-layout">
+        
+        <!-- SVG Map Container -->
+        <div class="map-interactive-card" style="padding: 1.5rem;">
+          <div class="map-svg-wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" class="aksara-svg-map" id="dedicated-indonesia-map" role="img" aria-label="Peta Interaktif Kepulauan Indonesia">
+              <defs>
+                <filter id="glow-active-dedicated" x="-20%" y="-20%" width="140%" height="140%">
+                  <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#DAA520" flood-opacity="0.8"/>
+                </filter>
+              </defs>
+
+              <g class="map-grid" stroke="#442F23" stroke-opacity="0.08" stroke-dasharray="3,6" stroke-width="1">
+                <line x1="50" y1="120" x2="1150" y2="120" />
+                <line x1="50" y1="250" x2="1150" y2="250" />
+                <line x1="50" y1="380" x2="1150" y2="380" />
+                <line x1="220" y1="50" x2="220" y2="450" />
+                <line x1="450" y1="50" x2="450" y2="450" />
+                <line x1="720" y1="50" x2="720" y2="450" />
+                <line x1="960" y1="50" x2="960" y2="450" />
+              </g>
+
+              <g class="map-compass" transform="translate(1080, 80) scale(0.65)">
+                <circle cx="40" cy="40" r="36" fill="none" stroke="#B66E41" stroke-width="1.5" stroke-dasharray="2,3"/>
+                <polygon points="40,6 46,36 40,32 34,36" fill="#D36228"/>
+                <polygon points="40,74 46,44 40,48 34,44" fill="#442F23"/>
+                <polygon points="6,40 36,46 32,40 36,34" fill="#442F23"/>
+                <polygon points="74,40 44,46 48,40 44,34" fill="#442F23"/>
+                <text x="40" y="-2" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-weight="700" font-size="16" fill="#D36228">U</text>
+              </g>
+
+              <!-- Regions -->
+              <g id="reg-sumatera" class="map-region-group" data-region="sumatera" tabindex="0" role="button">
+                <path class="island-path" d="M 120,95 Q 145,130 180,185 Q 210,230 255,280 Q 285,320 315,350 Q 325,355 330,345 Q 315,320 285,260 Q 255,200 220,150 Q 180,110 140,85 Z" />
+                <circle class="island-small" cx="130" cy="205" r="5" />
+                <circle class="island-small" cx="160" cy="255" r="6" />
+                <circle class="island-small" cx="185" cy="295" r="7" />
+                <circle class="island-small" cx="305" cy="285" r="10" />
+                <circle class="island-small" cx="335" cy="295" r="8" />
+                <g class="region-pin" transform="translate(210, 190)">
+                  <circle class="pin-ring" cx="0" cy="0" r="12" />
+                  <circle class="pin-dot" cx="0" cy="0" r="4" />
+                  <text class="pin-label" x="0" y="24" text-anchor="middle">SUMATERA</text>
+                </g>
+              </g>
+
+              <g id="reg-jawa" class="map-region-group active" data-region="jawa" tabindex="0" role="button" aria-pressed="true">
+                <path class="island-path" d="M 335,370 Q 380,365 440,360 Q 510,360 575,370 Q 600,380 595,395 Q 560,395 490,395 Q 410,400 350,395 Q 330,390 335,370 Z" />
+                <ellipse class="island-small" cx="575" cy="360" rx="20" ry="7" />
+                <g class="region-pin" transform="translate(460, 395)">
+                  <circle class="pin-ring" cx="0" cy="0" r="12" />
+                  <circle class="pin-dot" cx="0" cy="0" r="4" />
+                  <text class="pin-label" x="0" y="24" text-anchor="middle">JAWA</text>
+                </g>
+              </g>
+
+              <g id="reg-bali-nusa" class="map-region-group" data-region="bali-nusa" tabindex="0" role="button">
+                <ellipse class="island-small" cx="620" cy="385" rx="14" ry="9" />
+                <ellipse class="island-small" cx="650" cy="387" rx="13" ry="9" />
+                <path class="island-path" d="M 675,380 Q 700,378 720,385 Q 710,395 680,392 Z" />
+                <path class="island-path" d="M 740,380 Q 775,375 810,380 Q 805,390 750,390 Z" />
+                <ellipse class="island-small" cx="745" cy="415" rx="18" ry="10" />
+                <path class="island-path" d="M 820,395 Q 850,385 865,400 Q 850,420 825,410 Z" />
+                <circle class="island-small" cx="810" cy="430" r="6" />
+                <g class="region-pin" transform="translate(710, 420)">
+                  <circle class="pin-ring" cx="0" cy="0" r="12" />
+                  <circle class="pin-dot" cx="0" cy="0" r="4" />
+                  <text class="pin-label" x="0" y="24" text-anchor="middle">BALI &amp; NUSA TENGGARA</text>
+                </g>
+              </g>
+
+              <g id="reg-kalimantan" class="map-region-group" data-region="kalimantan" tabindex="0" role="button">
+                <path class="island-path" d="M 390,210 Q 420,165 470,165 Q 520,170 540,210 Q 560,250 560,300 Q 520,335 460,330 Q 410,320 380,280 Q 375,245 390,210 Z" />
+                <g class="region-pin" transform="translate(465, 240)">
+                  <circle class="pin-ring" cx="0" cy="0" r="12" />
+                  <circle class="pin-dot" cx="0" cy="0" r="4" />
+                  <text class="pin-label" x="0" y="24" text-anchor="middle">KALIMANTAN</text>
+                </g>
+              </g>
+
+              <g id="reg-sulawesi" class="map-region-group" data-region="sulawesi" tabindex="0" role="button">
+                <path class="island-path" d="M 640,165 Q 675,150 710,160 Q 695,180 660,185 Q 640,210 655,235 Q 685,240 715,260 Q 710,275 670,270 Q 645,280 650,330 Q 630,345 625,320 Q 625,270 610,240 Q 605,200 640,165 Z" />
+                <circle class="island-small" cx="665" cy="340" r="8" />
+                <g class="region-pin" transform="translate(645, 220)">
+                  <circle class="pin-ring" cx="0" cy="0" r="12" />
+                  <circle class="pin-dot" cx="0" cy="0" r="4" />
+                  <text class="pin-label" x="0" y="24" text-anchor="middle">SULAWESI</text>
+                </g>
+              </g>
+
+              <g id="reg-maluku" class="map-region-group" data-region="maluku" tabindex="0" role="button">
+                <path class="island-path" d="M 770,160 Q 790,145 795,170 Q 780,190 800,205 Q 780,215 765,190 Z" />
+                <ellipse class="island-small" cx="800" cy="275" rx="28" ry="10" transform="rotate(-10, 800, 275)" />
+                <ellipse class="island-small" cx="745" cy="275" rx="15" ry="11" />
+                <circle class="island-small" cx="810" cy="320" r="5" />
+                <circle class="island-small" cx="850" cy="340" r="7" />
+                <circle class="island-small" cx="880" cy="340" r="9" />
+                <g class="region-pin" transform="translate(780, 290)">
+                  <circle class="pin-ring" cx="0" cy="0" r="12" />
+                  <circle class="pin-dot" cx="0" cy="0" r="4" />
+                  <text class="pin-label" x="0" y="24" text-anchor="middle">MALUKU</text>
+                </g>
+              </g>
+
+              <g id="reg-papua" class="map-region-group" data-region="papua" tabindex="0" role="button">
+                <path class="island-path" d="M 870,220 Q 900,195 930,225 Q 920,240 890,245 Q 910,260 970,260 Q 1060,260 1100,270 Q 1110,340 1080,380 Q 1020,380 970,335 Q 940,305 910,285 Q 860,250 870,220 Z" />
+                <ellipse class="island-small" cx="950" cy="210" rx="14" ry="5" />
+                <ellipse class="island-small" cx="960" cy="225" rx="20" ry="6" />
+                <circle class="island-small" cx="850" cy="205" r="6" />
+                <circle class="island-small" cx="840" cy="225" r="5" />
+                <g class="region-pin" transform="translate(1010, 290)">
+                  <circle class="pin-ring" cx="0" cy="0" r="12" />
+                  <circle class="pin-dot" cx="0" cy="0" r="4" />
+                  <text class="pin-label" x="0" y="24" text-anchor="middle">PAPUA</text>
+                </g>
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Detail Dossier Panel -->
+        <aside class="map-detail-panel" id="dedicated-map-detail-panel">
+          <!-- Populated by map.js -->
+        </aside>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Modal -->
+  <div class="aksara-modal-backdrop" id="aksara-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="aksara-modal" id="aksara-modal">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Tutup jendela rincian">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+
+      <div class="modal-hero">
+        <img src="" alt="" class="modal-hero-img" id="modal-hero-img">
+        <div class="modal-hero-gradient">
+          <span class="fan-card-badge" id="modal-badge">Warisan Budaya</span>
+          <h2 class="title-section" id="modal-title" style="color: var(--bg-primary); margin-bottom: 0.25rem;">Nama Budaya</h2>
+          <p id="modal-origin" style="color: var(--bg-secondary); font-size: 0.95rem; font-weight: 500;">Asal Daerah</p>
+        </div>
+      </div>
+
+      <div class="modal-content-body">
+        <div class="modal-tabs" role="tablist">
+          <button class="modal-tab-btn active" data-tab="history" role="tab" aria-selected="true">Latar Belakang Sejarah</button>
+          <button class="modal-tab-btn" data-tab="philosophy" role="tab" aria-selected="false">Filosofi & Makna Hidup</button>
+          <button class="modal-tab-btn" data-tab="craft" role="tab" aria-selected="false">Teknik Kriya Tradisional</button>
+          <button class="modal-tab-btn" data-tab="unesco" role="tab" aria-selected="false">Status Pelestarian & UNESCO</button>
+        </div>
+
+        <div class="modal-tab-panel active" id="tab-panel-history"><p id="modal-history-text"></p></div>
+        <div class="modal-tab-panel" id="tab-panel-philosophy"><p id="modal-phil-text"></p></div>
+        <div class="modal-tab-panel" id="tab-panel-craft"><p id="modal-craft-text"></p></div>
+        <div class="modal-tab-panel" id="tab-panel-unesco"><p id="modal-unesco-text"></p></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="aksara-footer" role="contentinfo">
+    <div class="aksara-container">
+      <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+        <div>&copy; 2026 AKSARA Heritage Platform. TECHTOPIA Vol. 2 Web Design Competition.</div>
+        <a href="index.html" style="color: var(--accent-gold); font-weight: 600;">Kembali ke Beranda Utama &rarr;</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/cultural-data.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const mapInstance = window.initAksaraMap('dedicated-indonesia-map', 'dedicated-map-detail-panel');
+
+      // Quick region filter pills
+      const regionBtns = document.querySelectorAll('.filter-btn[data-map-region]');
+      regionBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          regionBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const reg = btn.dataset.mapRegion;
+          if (mapInstance) {
+            mapInstance.selectRegion(reg);
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

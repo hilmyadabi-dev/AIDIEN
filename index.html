@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="AKSARA — Platform digital preservasi warisan budaya dan seni Nusantara untuk kompetisi TECHTOPIA Vol. 2. Eksplorasi keindahan Batik, Tari, Wayang, Arsitektur Vernakular, dan Musik Tradisional Indonesia.">
+  <meta name="keywords"
+    content="AKSARA, Budaya Indonesia, Pusaka Nusantara, Megamendung, Wayang Kulit, Rumah Gadang, Tari Saman, UNESCO, TECHTOPIA Vol 2">
+  <meta name="author" content="Tim Aidien">
+
+  <title>AKSARA — Preserving Unity, Sustaining Ancestral Knowledge & Artistry</title>
+
+  <!-- Typography: Cormorant Garamond & DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <link rel="icon" href="assets/images/aksara-emblem.png" type="image/png">
+</head>
+
+<body>
+
+  <!-- ======================================================================
+       NAVIGATION HEADER
+       ====================================================================== -->
+  <header class="aksara-header" role="banner">
+    <div class="aksara-container header-container">
+
+      <!-- Brand Logo -->
+      <a href="index.html" class="header-brand" aria-label="Beranda AKSARA">
+        <div class="brand-symbol">
+          <img src="assets/images/aksara-emblem.png" alt="">
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">AKSARA</span>
+          <span class="brand-tagline">Pusaka Nusantara</span>
+        </div>
+      </a>
+
+      <!-- Desktop & Drawer Navigation -->
+      <nav class="header-nav" id="header-nav" role="navigation" aria-label="Menu Utama">
+        <a href="index.html" class="nav-link active">Beranda</a>
+        <a href="galeri.html" class="nav-link">Penjelajah Budaya</a>
+        <a href="peta.html" class="nav-link">Peta Kartografi</a>
+        <a href="kronik.html" class="nav-link">Lini Masa</a>
+        <a href="tentang.html" class="nav-link">Preservasi & Tim</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="header-actions">
+        <!-- Pure Web Audio Ambient Soundscape Button -->
+        <button class="btn-soundscape" id="soundscape-btn" aria-label="Nyalakan alunan suara gamelan Nusantara"
+          title="Alunan Gamelan Pentatonik (Web Audio API)">
+          <div class="sound-waves" aria-hidden="true">
+            <span class="sound-bar"></span>
+            <span class="sound-bar"></span>
+            <span class="sound-bar"></span>
+          </div>
+          <span>Alunan Suara</span>
+        </button>
+
+        <a href="#penjelajah" class="btn-primary" id="btn-header-explore">
+          <span>Eksplorasi</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+
+        <!-- Mobile Menu Hamburger -->
+        <button class="btn-menu-toggle" id="menu-toggle-btn" aria-label="Buka menu navigasi" aria-expanded="false">
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ====================================================================
+         HERO SECTION
+         ==================================================================== -->
+    <section class="hero-section" aria-label="Sorotan Utama Pusaka Nusantara">
+      <div class="aksara-container">
+        <div class="hero-grid">
+
+          <!-- Editorial Typography & CTA -->
+          <div class="hero-content">
+            <h1 class="title-hero">
+              Menautkan Memori <br>
+              <span class="hero-title-highlight">Leluhur</span> ke Ranah <br>
+              Masa Depan.
+            </h1>
+
+            <p class="lead-text hero-description">
+              AKSARA adalah museum digital interaktif yang merawat denyut peradaban kepulauan Nusantara. Menghidupkan
+              kembali filosofi luhur, kriya adiluhung, ritus vernakular, dan seni pertunjukan melalui medium editorial
+              kontemporer yang berakar pada kearifan Batik Megamendung.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#penjelajah" class="btn-primary btn-magnetic" id="hero-cta-explore">
+                <span>Jelajahi Koleksi Pusaka</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+
+              <a href="#peta" class="btn-secondary btn-magnetic" id="hero-cta-map">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10" />
+                  <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
+                </svg>
+                <span>Peta Kepulauan</span>
+              </a>
+            </div>
+
+            <!-- Heritage Counters -->
+            <div class="hero-stats-bar">
+              <div class="stat-item">
+                <span class="stat-value">12<span>+</span></span>
+                <span class="stat-label">Warisan UNESCO</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value">38</span>
+                <span class="stat-label">Provinsi Budaya</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value">1.340<span>+</span></span>
+                <span class="stat-label">Suku Bangsa</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-value">718</span>
+                <span class="stat-label">Bahasa Daerah</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Visual Frame with Layered Artwork -->
+          <div class="hero-visual">
+            <div class="hero-image-frame">
+              <img src="assets/images/hero.jpg"
+                alt="Kurasi Mahakarya Pusaka Nusantara: Maestro Pembatik Megamendung, Penari Legong Bali, dan Wayang Kulit"
+                class="hero-main-img" width="1376" height="768">
+            </div>
+
+            <!-- Overlapping Editorial Badge -->
+            <aside class="hero-floating-card" aria-label="Fokus Kurasi">
+              <span class="floating-card-tag">Fokus Kurasi Pekan Ini</span>
+              <h3 class="floating-card-title">Siklus Awan Megamendung</h3>
+              <p class="floating-card-desc">Simbol kesabaran kosmik dan keteduhan budi pekerti pesisir Cirebon dalam 7
+                tingkatan gradasi warna.</p>
+            </aside>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Megamendung Fluid Divider -->
+    <div class="divider-megamendung" aria-hidden="true"></div>
+
+    <!-- ====================================================================
+         CURATORIAL PHILOSOPHY (FILOSOFI PUSAKA & MEGAMENDUNG)
+         ==================================================================== -->
+    <section class="section-spacing curatorial-section" aria-labelledby="curatorial-heading">
+      <div class="aksara-container">
+        <div class="curatorial-grid">
+
+          <!-- Curatorial Quote -->
+          <div class="curatorial-quote-box reveal-init">
+            <span class="curatorial-quote-mark" aria-hidden="true">“</span>
+            <blockquote class="curatorial-quote-text">
+              Kebudayaan bukanlah fosil beku yang sekadar dipajang di etalase museum. Ia adalah mata air kehidupan,
+              kompas moral, dan nafas peradaban yang harus terus mengalir menyejukkan akal budi manusia lintas zaman.
+            </blockquote>
+            <div class="curatorial-author">
+              <span class="author-line"></span>
+              <div>
+                <div class="author-name">Ki Suwito Atmodiharjo</div>
+                <div style="font-size: 0.78rem; color: var(--text-muted);">Kurator & Pengkaji Manuskrip Keraton</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Philosophy Pillars -->
+          <div class="curatorial-points reveal-init reveal-delay-2">
+            <div class="subtitle-editorial">Prinsip Rancang Bangun AKSARA</div>
+            <h2 id="curatorial-heading" class="title-section">Tiga Nilai Adiluhung</h2>
+
+            <div class="point-card">
+              <span class="point-num">01</span>
+              <div>
+                <h3 class="point-title">Ketenangan Jiwa (Megamendung)</h3>
+                <p class="point-desc">Menyerap ritme tujuh lapis awan Cirebon sebagai ajaran untuk senantiasa menahan
+                  amarah, bersikap bijaksana, dan menjadi penyejuk bagi sesama manusia.</p>
+              </div>
+            </div>
+
+            <div class="point-card">
+              <span class="point-num">02</span>
+              <div>
+                <h3 class="point-title">Keselarasan Kosmik (Harmoni Alam)</h3>
+                <p class="point-desc">Menghormati prinsip 'Alam Takambang Jadi Guru' dari Minang hingga 'Tri Hita
+                  Karana' di Bali, menyeimbangkan relasi manusia, alam raya, dan Sang Pencipta.</p>
+              </div>
+            </div>
+
+            <div class="point-card">
+              <span class="point-num">03</span>
+              <div>
+                <h3 class="point-title">Preservasi Berkelanjutan</h3>
+                <p class="point-desc">Mentransformasikan pengetahuan lisan dan kriya adiluhung ke dalam arsip digital
+                  interaktif agar tetap dihayati oleh generasi muda di era kecerdasan buatan.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CULTURAL EXPLORER & FAN-SHAPED GALLERY INTERACTION -->
+    <section class="section-spacing" id="penjelajah" aria-labelledby="explorer-heading">
+      <div class="aksara-container">
+
+        <header class="explorer-header reveal-init">
+          <span class="subtitle-editorial" style="justify-content: center;">Galeri Eksploratif Dinamis</span>
+          <h2 id="explorer-heading" class="title-section">Penjelajah Pusaka Nusantara</h2>
+          <p class="lead-text" style="margin: 0 auto;">
+            Nikmati interaksi galeri berbentuk kipas (fan-shaped gallery) yang terinspirasi oleh kelenturan kipas
+            tradisi dan gerak awan berlapis. Klik atau geser kartu untuk menelaah rincian filosofi adiluhung setiap
+            karya.
+          </p>
+
+          <!-- Category Filter Bar -->
+          <div class="filter-bar" role="tablist" aria-label="Saring berdasarkan kategori budaya">
+            <button class="filter-btn active" data-category="all" role="tab" aria-selected="true">Semua Koleksi</button>
+            <button class="filter-btn" data-category="wastra" role="tab" aria-selected="false">Seni Kriya &
+              Wastra</button>
+            <button class="filter-btn" data-category="pertunjukan" role="tab" aria-selected="false">Tari &
+              Pertunjukan</button>
+            <button class="filter-btn" data-category="arsitektur" role="tab" aria-selected="false">Arsitektur
+              Vernakular</button>
+            <button class="filter-btn" data-category="musik" role="tab" aria-selected="false">Instrumen Musik</button>
+          </div>
+        </header>
+
+        <!-- FAN GALLERY WRAPPER (Custom Original JS & CSS) -->
+        <div class="fan-gallery-wrapper reveal-init reveal-delay-1" id="fan-gallery-container"
+          aria-label="Tampilan Interaktif Berbentuk Kipas">
+          <!-- Populated dynamically by gallery.js -->
+        </div>
+
+        <div style="text-align: center; margin-top: 1.5rem;">
+          <a href="galeri.html" class="btn-secondary btn-magnetic">
+            <span>Buka Arsip Katalog Lengkap</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         INTERACTIVE INDONESIA MAP SECTION
+         ==================================================================== -->
+    <section class="section-spacing map-section" id="peta" aria-labelledby="map-heading">
+      <div class="aksara-container">
+
+        <header class="reveal-init" style="max-width: 720px; margin-bottom: 2rem;">
+          <span class="subtitle-editorial">Kartografi Digital Kepulauan</span>
+          <h2 id="map-heading" class="title-section">Jelajah Budaya 7 Wilayah Adat</h2>
+          <p class="lead-text">
+            Peta vektor asli Nusantara yang menghubungkan ruang geografis dengan pusaka adiluhung. Klik pada setiap
+            gugus kepulauan untuk menyingkap kearifan lokal, filosofi hidup, dan warisan seni yang berakar kuat di tanah
+            tersebut.
+          </p>
+        </header>
+
+        <div class="map-layout">
+
+          <!-- Interactive SVG Map Canvas -->
+          <div class="map-interactive-card reveal-init">
+            <div class="map-svg-wrapper">
+              <!-- Native SVG Map Inline -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" class="aksara-svg-map"
+                id="main-indonesia-map" role="img" aria-label="Peta Interaktif Kepulauan Indonesia">
+                <defs>
+                  <filter id="glow-active-main" x="-20%" y="-20%" width="140%" height="140%">
+                    <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#DAA520" flood-opacity="0.8" />
+                  </filter>
+                </defs>
+
+                <!-- Editorial Cartography Grid -->
+                <g class="map-grid" stroke="#442F23" stroke-opacity="0.08" stroke-dasharray="3,6" stroke-width="1">
+                  <line x1="50" y1="120" x2="1150" y2="120" />
+                  <line x1="50" y1="250" x2="1150" y2="250" />
+                  <line x1="50" y1="380" x2="1150" y2="380" />
+                  <line x1="220" y1="50" x2="220" y2="450" />
+                  <line x1="450" y1="50" x2="450" y2="450" />
+                  <line x1="720" y1="50" x2="720" y2="450" />
+                  <line x1="960" y1="50" x2="960" y2="450" />
+                </g>
+
+                <!-- Editorial Compass Rose -->
+                <g class="map-compass" transform="translate(1080, 80) scale(0.65)">
+                  <circle cx="40" cy="40" r="36" fill="none" stroke="#B66E41" stroke-width="1.5"
+                    stroke-dasharray="2,3" />
+                  <polygon points="40,6 46,36 40,32 34,36" fill="#D36228" />
+                  <polygon points="40,74 46,44 40,48 34,44" fill="#442F23" />
+                  <polygon points="6,40 36,46 32,40 36,34" fill="#442F23" />
+                  <polygon points="74,40 44,46 48,40 44,34" fill="#442F23" />
+                  <text x="40" y="-2" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif"
+                    font-weight="700" font-size="16" fill="#D36228">U</text>
+                </g>
+
+                <!-- 1. SUMATERA -->
+                <g id="region-sumatera" class="map-region-group" data-region="sumatera" tabindex="0" role="button"
+                  aria-label="Gugus Kepulauan Sumatera">
+                  <path class="island-path"
+                    d="M 120,95 Q 145,130 180,185 Q 210,230 255,280 Q 285,320 315,350 Q 325,355 330,345 Q 315,320 285,260 Q 255,200 220,150 Q 180,110 140,85 Z" />
+                  <circle class="island-small" cx="130" cy="205" r="5" />
+                  <circle class="island-small" cx="160" cy="255" r="6" />
+                  <circle class="island-small" cx="185" cy="295" r="7" />
+                  <circle class="island-small" cx="305" cy="285" r="10" />
+                  <circle class="island-small" cx="335" cy="295" r="8" />
+                  <g class="region-pin" transform="translate(210, 190)">
+                    <circle class="pin-ring" cx="0" cy="0" r="12" />
+                    <circle class="pin-dot" cx="0" cy="0" r="4" />
+                    <text class="pin-label" x="0" y="24" text-anchor="middle">SUMATERA</text>
+                    <text class="pin-sub" x="0" y="36" text-anchor="middle">Rumah Gadang • Tari Saman</text>
+                  </g>
+                </g>
+
+                <!-- 2. JAWA (Default Active) -->
+                <g id="region-jawa" class="map-region-group active" data-region="jawa" tabindex="0" role="button"
+                  aria-label="Pulau Jawa" aria-pressed="true">
+                  <path class="island-path"
+                    d="M 335,370 Q 380,365 440,360 Q 510,360 575,370 Q 600,380 595,395 Q 560,395 490,395 Q 410,400 350,395 Q 330,390 335,370 Z" />
+                  <ellipse class="island-small" cx="575" cy="360" rx="20" ry="7" />
+                  <g class="region-pin" transform="translate(460, 395)">
+                    <circle class="pin-ring" cx="0" cy="0" r="12" />
+                    <circle class="pin-dot" cx="0" cy="0" r="4" />
+                    <text class="pin-label" x="0" y="24" text-anchor="middle">JAWA</text>
+                    <text class="pin-sub" x="0" y="36" text-anchor="middle">Batik Megamendung • Wayang</text>
+                  </g>
+                </g>
+
+                <!-- 3. BALI & NUSA TENGGARA -->
+                <g id="region-bali-nusa" class="map-region-group" data-region="bali-nusa" tabindex="0" role="button"
+                  aria-label="Bali dan Nusa Tenggara">
+                  <ellipse class="island-small" cx="620" cy="385" rx="14" ry="9" />
+                  <ellipse class="island-small" cx="650" cy="387" rx="13" ry="9" />
+                  <path class="island-path" d="M 675,380 Q 700,378 720,385 Q 710,395 680,392 Z" />
+                  <path class="island-path" d="M 740,380 Q 775,375 810,380 Q 805,390 750,390 Z" />
+                  <ellipse class="island-small" cx="745" cy="415" rx="18" ry="10" />
+                  <path class="island-path" d="M 820,395 Q 850,385 865,400 Q 850,420 825,410 Z" />
+                  <circle class="island-small" cx="810" cy="430" r="6" />
+                  <g class="region-pin" transform="translate(710, 420)">
+                    <circle class="pin-ring" cx="0" cy="0" r="12" />
+                    <circle class="pin-dot" cx="0" cy="0" r="4" />
+                    <text class="pin-label" x="0" y="24" text-anchor="middle">BALI &amp; NUSA TENGGARA</text>
+                    <text class="pin-sub" x="0" y="36" text-anchor="middle">Legong • Sasando • Tenun Sumba</text>
+                  </g>
+                </g>
+
+                <!-- 4. KALIMANTAN -->
+                <g id="region-kalimantan" class="map-region-group" data-region="kalimantan" tabindex="0" role="button"
+                  aria-label="Pulau Kalimantan">
+                  <path class="island-path"
+                    d="M 390,210 Q 420,165 470,165 Q 520,170 540,210 Q 560,250 560,300 Q 520,335 460,330 Q 410,320 380,280 Q 375,245 390,210 Z" />
+                  <g class="region-pin" transform="translate(465, 240)">
+                    <circle class="pin-ring" cx="0" cy="0" r="12" />
+                    <circle class="pin-dot" cx="0" cy="0" r="4" />
+                    <text class="pin-label" x="0" y="24" text-anchor="middle">KALIMANTAN</text>
+                    <text class="pin-sub" x="0" y="36" text-anchor="middle">Mandau Dayak • Rumah Betang</text>
+                  </g>
+                </g>
+
+                <!-- 5. SULAWESI -->
+                <g id="region-sulawesi" class="map-region-group" data-region="sulawesi" tabindex="0" role="button"
+                  aria-label="Pulau Sulawesi">
+                  <path class="island-path"
+                    d="M 640,165 Q 675,150 710,160 Q 695,180 660,185 Q 640,210 655,235 Q 685,240 715,260 Q 710,275 670,270 Q 645,280 650,330 Q 630,345 625,320 Q 625,270 610,240 Q 605,200 640,165 Z" />
+                  <circle class="island-small" cx="665" cy="340" r="8" />
+                  <g class="region-pin" transform="translate(645, 220)">
+                    <circle class="pin-ring" cx="0" cy="0" r="12" />
+                    <circle class="pin-dot" cx="0" cy="0" r="4" />
+                    <text class="pin-label" x="0" y="24" text-anchor="middle">SULAWESI</text>
+                    <text class="pin-sub" x="0" y="36" text-anchor="middle">Tongkonan Toraja • Phinisi</text>
+                  </g>
+                </g>
+
+                <!-- 6. MALUKU -->
+                <g id="region-maluku" class="map-region-group" data-region="maluku" tabindex="0" role="button"
+                  aria-label="Kepulauan Maluku">
+                  <path class="island-path" d="M 770,160 Q 790,145 795,170 Q 780,190 800,205 Q 780,215 765,190 Z" />
+                  <ellipse class="island-small" cx="800" cy="275" rx="28" ry="10" transform="rotate(-10, 800, 275)" />
+                  <ellipse class="island-small" cx="745" cy="275" rx="15" ry="11" />
+                  <circle class="island-small" cx="810" cy="320" r="5" />
+                  <circle class="island-small" cx="850" cy="340" r="7" />
+                  <circle class="island-small" cx="880" cy="340" r="9" />
+                  <g class="region-pin" transform="translate(780, 290)">
+                    <circle class="pin-ring" cx="0" cy="0" r="12" />
+                    <circle class="pin-dot" cx="0" cy="0" r="4" />
+                    <text class="pin-label" x="0" y="24" text-anchor="middle">MALUKU</text>
+                    <text class="pin-sub" x="0" y="36" text-anchor="middle">Cakalele • Tenun Tanimbar</text>
+                  </g>
+                </g>
+
+                <!-- 7. PAPUA -->
+                <g id="region-papua" class="map-region-group" data-region="papua" tabindex="0" role="button"
+                  aria-label="Tanah Papua">
+                  <path class="island-path"
+                    d="M 870,220 Q 900,195 930,225 Q 920,240 890,245 Q 910,260 970,260 Q 1060,260 1100,270 Q 1110,340 1080,380 Q 1020,380 970,335 Q 940,305 910,285 Q 860,250 870,220 Z" />
+                  <ellipse class="island-small" cx="950" cy="210" rx="14" ry="5" />
+                  <ellipse class="island-small" cx="960" cy="225" rx="20" ry="6" />
+                  <circle class="island-small" cx="850" cy="205" r="6" />
+                  <circle class="island-small" cx="840" cy="225" r="5" />
+                  <g class="region-pin" transform="translate(1010, 290)">
+                    <circle class="pin-ring" cx="0" cy="0" r="12" />
+                    <circle class="pin-dot" cx="0" cy="0" r="4" />
+                    <text class="pin-label" x="0" y="24" text-anchor="middle">PAPUA</text>
+                    <text class="pin-sub" x="0" y="36" text-anchor="middle">Noken Anyam • Ukir Asmat</text>
+                  </g>
+                </g>
+              </svg>
+            </div>
+
+            <div
+              style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; font-size: 0.78rem; color: var(--text-muted);">
+              <span>* Klik atau sentuh wilayah kepulauan untuk menyaring data pusaka regional.</span>
+              <span style="font-weight: 600; color: var(--accent-secondary);">7 Gugus Kebudayaan</span>
+            </div>
+          </div>
+
+          <!-- Dynamic Regional Detail Panel -->
+          <aside class="map-detail-panel reveal-init reveal-delay-2" id="main-map-detail-panel" aria-live="polite">
+            <!-- Populated dynamically by map.js -->
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         CULTURAL TIMELINE SECTION (KRONIK MASA)
+         ==================================================================== -->
+    <section class="section-spacing section-dark timeline-section" id="kronik" aria-labelledby="timeline-heading">
+      <div class="aksara-container">
+
+        <div class="timeline-nav-bar reveal-init">
+          <div>
+            <span class="subtitle-editorial">Evolusi Peradaban Nusantara</span>
+            <h2 id="timeline-heading" class="title-section" style="color: var(--bg-primary);">Kronik Lini Masa Sejarah
+            </h2>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 1rem;">
+            <div class="timeline-drag-hint">
+              <span>Geser Lini Masa</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </div>
+            <button class="fan-nav-btn" id="timeline-prev-btn" aria-label="Masa Sebelumnya"
+              style="background: rgba(245, 229, 192, 0.1); color: var(--bg-primary); border-color: var(--accent-gold);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="15 18 9 12 15 6" />
+              </svg>
+            </button>
+            <button class="fan-nav-btn" id="timeline-next-btn" aria-label="Masa Selanjutnya"
+              style="background: rgba(245, 229, 192, 0.1); color: var(--bg-primary); border-color: var(--accent-gold);">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="9 18 15 12 9 6" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Horizontal Scrollable Epoch Track -->
+        <div class="timeline-scroll-track" id="timeline-track" role="region" aria-label="Lini Masa Horisontal Sejarah">
+          <!-- Populated by timeline.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PRESERVATION SECTION & INTERACTIVE GUARDIAN PLEDGE -->
+    <section class="section-spacing" id="preservasi" aria-labelledby="preservation-heading">
+      <div class="aksara-container">
+        <div class="preservation-grid">
+
+          <!-- Editorial Manifesto -->
+          <div class="reveal-init">
+            <span class="subtitle-editorial">Komitmen Pelestarian Generasi Masa Depan</span>
+            <h2 id="preservation-heading" class="title-section">Menjaga Nyala Pusaka, Menautkan Kebangsaan</h2>
+
+            <p class="lead-text" style="margin-bottom: 1.5rem;">
+              Warisan budaya kita bukanlah masa lalu yang membatu, melainkan api identitas yang menentukan arah masa
+              depan bangsa. Di era disrupsi digital dan globalisasi yang serba cepat, melestarikan pusaka leluhur adalah
+              wujud tertinggi dari kedaulatan moral kita.
+            </p>
+
+            <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 2rem;">
+              Setiap kali kita memelajari filosofi Batik Megamendung, melantunkan nada Sasando, atau mengagumi
+              kekompakan Tari Saman, kita tengah merajut kembali persatuan dalam keberagaman yang telah diwariskan
+              ribuan tahun silam.
+            </p>
+
+            <div style="display: flex; gap: 1rem; align-items: center;">
+              <img src="assets/images/preservasi.jpg" alt="Dokumentasi Pelestarian Budaya"
+                style="width: 80px; height: 80px; border-radius: var(--curve-megamendung-sm); object-fit: cover; border: 2px solid var(--accent-gold);">
+              <div>
+                <strong style="display: block; font-size: 1.05rem; color: var(--text-primary);">Gerakan Sahabat Pusaka
+                  AKSARA</strong>
+                <span style="font-size: 0.82rem; color: var(--accent-secondary);">Didukung oleh Komunitas Pelestari
+                  Budaya & Edukator Muda</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Certificate Generator Card -->
+          <div class="pledge-card reveal-init reveal-delay-2">
+            <header class="pledge-header">
+              <div class="pledge-seal">P</div>
+              <h3
+                style="font-family: var(--font-heading); font-size: 1.75rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.25rem;">
+                Janji Penjaga Pusaka
+              </h3>
+              <p style="font-size: 0.82rem; color: var(--text-muted);">
+                Torehkan nama Anda untuk menerima Piagam Resmi Digital Pelindung Pusaka Nusantara.
+              </p>
+            </header>
+
+            <form id="pledge-form">
+              <div class="pledge-input-group">
+                <label for="pledge-name" class="pledge-label">Nama Lengkap Penjaga Pusaka</label>
+                <input type="text" id="pledge-name" class="pledge-input" placeholder="Contoh: Raden Ayu Kartini"
+                  required maxlength="45">
+              </div>
+
+              <label class="pledge-checkbox-wrapper">
+                <input type="checkbox" id="pledge-agree" required checked>
+                <span>Saya berikrar untuk senantiasa menghormati, mempelajari, dan meneruskan nilai-nilai luhur warisan
+                  seni budaya Nusantara.</span>
+              </label>
+
+              <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;"
+                id="btn-generate-pledge">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                  <polyline points="14 2 14 8 20 8" />
+                  <line x1="16" y1="13" x2="8" y2="13" />
+                  <line x1="16" y1="17" x2="8" y2="17" />
+                  <polyline points="10 9 9 9 8 9" />
+                </svg>
+                <span>Terbitkan & Unduh Piagam Resmi</span>
+              </button>
+            </form>
+
+            <div id="pledge-success-msg"
+              style="display: none; margin-top: 1.25rem; padding: 0.85rem; border-radius: 8px; background: rgba(78, 110, 88, 0.15); border: 1px solid var(--accent-nature); color: var(--accent-nature); font-size: 0.85rem; text-align: center; font-weight: 600;">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- CULTURAL DETAIL MODAL-->
+  <div class="aksara-modal-backdrop" id="aksara-modal-backdrop" role="dialog" aria-modal="true"
+    aria-labelledby="modal-title">
+    <div class="aksara-modal" id="aksara-modal">
+
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Tutup jendela rincian budaya">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+
+      <div class="modal-hero">
+        <img src="" alt="" class="modal-hero-img" id="modal-hero-img">
+        <div class="modal-hero-gradient">
+          <span class="fan-card-badge" id="modal-badge">Warisan Budaya</span>
+          <h2 class="title-section" id="modal-title" style="color: var(--bg-primary); margin-bottom: 0.25rem;">Nama
+            Budaya</h2>
+          <p id="modal-origin" style="color: var(--bg-secondary); font-size: 0.95rem; font-weight: 500;">Asal Daerah</p>
+        </div>
+      </div>
+
+      <div class="modal-content-body">
+
+        <!-- Tab Navigation -->
+        <div class="modal-tabs" role="tablist">
+          <button class="modal-tab-btn active" data-tab="history" role="tab" aria-selected="true">Latar Belakang
+            Sejarah</button>
+          <button class="modal-tab-btn" data-tab="philosophy" role="tab" aria-selected="false">Filosofi & Makna
+            Hidup</button>
+          <button class="modal-tab-btn" data-tab="craft" role="tab" aria-selected="false">Teknik Kriya
+            Tradisional</button>
+          <button class="modal-tab-btn" data-tab="unesco" role="tab" aria-selected="false">Status Pelestarian &
+            UNESCO</button>
+        </div>
+
+        <!-- Tab 1: Sejarah -->
+        <div class="modal-tab-panel active" id="tab-panel-history">
+          <p id="modal-history-text"></p>
+        </div>
+
+        <!-- Tab 2: Filosofi -->
+        <div class="modal-tab-panel" id="tab-panel-philosophy">
+          <p id="modal-phil-text"></p>
+        </div>
+
+        <!-- Tab 3: Kriya -->
+        <div class="modal-tab-panel" id="tab-panel-craft">
+          <p id="modal-craft-text"></p>
+        </div>
+
+        <!-- Tab 4: UNESCO -->
+        <div class="modal-tab-panel" id="tab-panel-unesco">
+          <p id="modal-unesco-text"></p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       FOOTER
+       ====================================================================== -->
+  <footer class="aksara-footer" role="contentinfo">
+    <div class="aksara-container">
+      <div class="footer-grid">
+
+        <!-- Brand & Vision -->
+        <div>
+          <div class="header-brand" style="margin-bottom: 0.5rem;">
+            <div class="brand-symbol" style="background: var(--bg-dark); border-color: var(--accent-gold);">
+              <img src="assets/images/aksara-emblem.png" alt="">
+            </div>
+            <span class="brand-title" style="color: var(--bg-primary);">AKSARA</span>
+          </div>
+          <p class="footer-brand-desc">
+            Platform museum budaya digital interaktif yang merajut kemegahan warisan Nusantara dengan estetika editorial
+            kontemporer. Membawa kebijaksanaan leluhur ke peradaban masa depan.
+          </p>
+          <div class="footer-badges">
+            <span class="footer-badge">TECHTOPIA VOL. 2</span>
+            <span class="footer-badge">PUSAKA 2026</span>
+          </div>
+        </div>
+
+        <!-- Navigasi Utama -->
+        <div>
+          <h4 class="footer-col-title">Jelajah Pusaka</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Beranda Utama</a></li>
+            <li><a href="galeri.html" class="footer-link">Penjelajah Koleksi</a></li>
+            <li><a href="peta.html" class="footer-link">Peta Kartografi 7 Wilayah</a></li>
+            <li><a href="kronik.html" class="footer-link">Kronik Lini Masa</a></li>
+            <li><a href="tentang.html" class="footer-link">Tentang Platform & Preservasi</a></li>
+          </ul>
+        </div>
+
+        <!-- Kategori Warisan -->
+        <div>
+          <h4 class="footer-col-title">Kategori Warisan</h4>
+          <ul class="footer-links">
+            <li><a href="galeri.html?cat=wastra" class="footer-link">Wastra &amp; Kriya Tekstil</a></li>
+            <li><a href="galeri.html?cat=pertunjukan" class="footer-link">Seni Tari &amp; Teater Tutur</a></li>
+            <li><a href="galeri.html?cat=arsitektur" class="footer-link">Arsitektur Vernakular</a></li>
+            <li><a href="galeri.html?cat=musik" class="footer-link">Instrumen Gamelan &amp; Dawai</a></li>
+            <li><a href="kronik.html" class="footer-link">Lini Masa Kemaharajaan</a></li>
+          </ul>
+        </div>
+
+        <!-- Kuratorial & Pengakuan -->
+        <div>
+          <h4 class="footer-col-title">Kuratorial & Standar</h4>
+          <p style="font-size: 0.85rem; color: var(--bg-secondary); line-height: 1.6; margin-bottom: 1rem;">
+            Seluruh data sejarah, filosofi adat, dan kronologi tahun merujuk pada inventaris resmi Warisan Budaya
+            Takbenda Kemendikbudristek & UNESCO.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 AKSARA Heritage Platform. Diciptakan untuk TECHTOPIA Vol. 2 Web Design Competition.
+        </div>
+        <div style="font-style: italic;">
+          "Bhinneka Tunggal Ika Tan Hana Dharma Mangrwa"
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts Execution Order -->
+  <script src="js/cultural-data.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/timeline.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Initialize Index Interactive Components -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Initialize Fan Gallery on Index
+      window.aksaraGallery = window.initAksaraGallery('fan-gallery-container');
+
+      // 2. Initialize SVG Map on Index
+      window.aksaraMap = window.initAksaraMap('main-indonesia-map', 'main-map-detail-panel');
+
+      // 3. Initialize Horizontal Timeline
+      window.aksaraTimeline = window.initAksaraTimeline('timeline-track');
+    });
+  </script>
+
+</body>
+
+</html>

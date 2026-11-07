@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="160" viewBox="0 0 320 160">
+  <defs>
+    <linearGradient id="cloud-layer-1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#442F23" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#B66E41" stop-opacity="0.18"/>
+    </linearGradient>
+    <linearGradient id="cloud-layer-2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B66E41" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#DAA520" stop-opacity="0.3"/>
+    </linearGradient>
+    <linearGradient id="cloud-layer-3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DAA520" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#E8C39E" stop-opacity="0.5"/>
+    </linearGradient>
+  </defs>
+  <!-- Authentic Megamendung Multi-layer Wave Contour -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Outer Layer -->
+    <path d="M 0,80 C 40,30 80,40 110,65 C 140,90 170,50 200,60 C 240,75 270,30 320,70 L 320,160 L 0,160 Z" fill="url(#cloud-layer-1)" stroke="#B66E41" stroke-width="1.5" stroke-opacity="0.4"/>
+    <!-- Middle Layer -->
+    <path d="M 15,95 C 50,55 85,62 110,80 C 135,98 165,70 195,78 C 230,90 260,55 305,88 L 305,160 L 15,160 Z" fill="url(#cloud-layer-2)" stroke="#DAA520" stroke-width="1.5" stroke-opacity="0.6"/>
+    <!-- Inner Core Layer -->
+    <path d="M 35,110 C 65,80 95,85 115,95 C 135,105 160,88 185,95 C 215,105 245,80 285,105 L 285,160 L 35,160 Z" fill="url(#cloud-layer-3)" stroke="#442F23" stroke-width="1.5" stroke-opacity="0.5"/>
+    <!-- Traditional Swirl Spiral -->
+    <path d="M 115,95 C 105,90 98,96 100,104 C 102,112 114,114 118,106" stroke="#442F23" stroke-width="1.5" stroke-opacity="0.7"/>
+    <path d="M 185,95 C 175,90 168,96 170,104 C 172,112 184,114 188,106" stroke="#442F23" stroke-width="1.5" stroke-opacity="0.7"/>
+  </g>
+</svg>

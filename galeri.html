@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Penjelajah Pusaka AKSARA — Arsip digital seni kriya, wastra, tari tradisional, arsitektur vernakular, dan instrumen musik kepulauan Nusantara.">
+  <title>Penjelajah Pusaka | AKSARA Digital Cultural Museum</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <link rel="icon" href="assets/images/aksara-emblem.png" type="image/png">
+</head>
+
+<body>
+
+  <!-- Navigation Header -->
+  <header class="aksara-header" role="banner">
+    <div class="aksara-container header-container">
+      <a href="index.html" class="header-brand" aria-label="Beranda AKSARA">
+        <div class="brand-symbol">
+          <img src="assets/images/aksara-emblem.png" alt="">
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">AKSARA</span>
+          <span class="brand-tagline">Pusaka Nusantara</span>
+        </div>
+      </a>
+
+      <nav class="header-nav" id="header-nav" role="navigation" aria-label="Menu Utama">
+        <a href="index.html" class="nav-link">Beranda</a>
+        <a href="galeri.html" class="nav-link active">Penjelajah Budaya</a>
+        <a href="peta.html" class="nav-link">Peta Kartografi</a>
+        <a href="kronik.html" class="nav-link">Lini Masa</a>
+        <a href="tentang.html" class="nav-link">Preservasi & Tim</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn-soundscape" id="soundscape-btn" aria-label="Nyalakan alunan suara gamelan"
+          title="Alunan Gamelan Pentatonik">
+          <div class="sound-waves" aria-hidden="true">
+            <span class="sound-bar"></span>
+            <span class="sound-bar"></span>
+            <span class="sound-bar"></span>
+          </div>
+          <span>Alunan Suara</span>
+        </button>
+
+        <button class="btn-menu-toggle" id="menu-toggle-btn" aria-label="Buka menu navigasi" aria-expanded="false">
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding-top: calc(var(--header-height) + 2rem); min-height: 85vh;">
+
+    <!-- Gallery Hero Header -->
+    <section class="aksara-container" style="padding-bottom: 2rem;">
+      <div style="text-align: center; max-width: 820px; margin: 0 auto 2.5rem;">
+        <span class="subtitle-editorial" style="justify-content: center;">Arsip Warisan Budaya &amp; Seni</span>
+        <h1 class="title-section" style="font-size: clamp(2.5rem, 5vw, 4rem);">Katalog Pusaka Adiluhung</h1>
+        <p class="lead-text" style="margin: 0 auto;">
+          Jelajahi dokumentasi mendalam karya seni, wastra, tari, arsitektur, dan musik adiluhung dari seluruh penjuru
+          Nusantara. Setiap entri dikurasi berdasarkan data sejarah dan nilai filosofis otentik.
+        </p>
+      </div>
+
+      <!-- Live Search & Control Bar -->
+      <div style="max-width: 760px; margin: 0 auto 2rem; position: relative;">
+        <div style="position: relative;">
+          <input type="text" id="gallery-search-input" class="pledge-input"
+            placeholder="Cari pusaka (contoh: Megamendung, Saman, Wayang, Toraja)..."
+            style="padding-left: 3rem; font-size: 1.05rem; background: var(--bg-primary);">
+          <svg
+            style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--accent-primary);"
+            width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+        </div>
+      </div>
+
+      <!-- Category Filter Chips & Mode Switcher -->
+      <div
+        style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(182, 110, 65, 0.2);">
+
+        <div class="filter-bar" style="margin-top: 0;" role="tablist">
+          <button class="filter-btn active" data-category="all" role="tab" aria-selected="true">Semua Koleksi
+            (11)</button>
+          <button class="filter-btn" data-category="wastra" role="tab" aria-selected="false">Kriya &amp; Wastra</button>
+          <button class="filter-btn" data-category="pertunjukan" role="tab" aria-selected="false">Tari &amp;
+            Teater</button>
+          <button class="filter-btn" data-category="arsitektur" role="tab" aria-selected="false">Arsitektur</button>
+          <button class="filter-btn" data-category="musik" role="tab" aria-selected="false">Instrumen Musik</button>
+        </div>
+
+        <!-- View Mode Switcher -->
+        <div
+          style="display: flex; align-items: center; gap: 0.5rem; background: rgba(182, 110, 65, 0.12); padding: 0.3rem; border-radius: var(--curve-megamendung-pill);">
+          <button id="view-mode-fan" class="filter-btn active"
+            style="padding: 0.4rem 0.9rem; font-size: 0.8rem; margin: 0;">Mode Kipas (3D)</button>
+          <button id="view-mode-grid" class="filter-btn"
+            style="padding: 0.4rem 0.9rem; font-size: 0.8rem; margin: 0; background: none; color: var(--text-primary); border-color: transparent;">Mode
+            Grid</button>
+        </div>
+
+      </div>
+
+      <!-- FAN VIEW DISPLAY -->
+      <div id="gallery-fan-view">
+        <div class="fan-gallery-wrapper" id="fan-gallery-full">
+          <!-- Populated by gallery.js -->
+        </div>
+      </div>
+
+      <!-- GRID VIEW DISPLAY (Initially Hidden) -->
+      <div id="gallery-grid-view" class="gallery-grid-view" style="display: none;">
+        <!-- Populated dynamically -->
+      </div>
+
+      <div id="search-no-results"
+        style="display: none; text-align: center; padding: 4rem 1rem; color: var(--text-muted);">
+        <h3 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 0.5rem;">Pusaka Tidak Ditemukan
+        </h3>
+        <p>Coba gunakan kata kunci lain seperti "batik", "tari", "kayu", atau "unesco".</p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Cultural Detail Modal -->
+  <div class="aksara-modal-backdrop" id="aksara-modal-backdrop" role="dialog" aria-modal="true"
+    aria-labelledby="modal-title">
+    <div class="aksara-modal" id="aksara-modal">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Tutup jendela rincian budaya">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+
+      <div class="modal-hero">
+        <img src="" alt="" class="modal-hero-img" id="modal-hero-img">
+        <div class="modal-hero-gradient">
+          <span class="fan-card-badge" id="modal-badge">Warisan Budaya</span>
+          <h2 class="title-section" id="modal-title" style="color: var(--bg-primary); margin-bottom: 0.25rem;">Nama
+            Budaya</h2>
+          <p id="modal-origin" style="color: var(--bg-secondary); font-size: 0.95rem; font-weight: 500;">Asal Daerah</p>
+        </div>
+      </div>
+
+      <div class="modal-content-body">
+        <div class="modal-tabs" role="tablist">
+          <button class="modal-tab-btn active" data-tab="history" role="tab" aria-selected="true">Latar Belakang
+            Sejarah</button>
+          <button class="modal-tab-btn" data-tab="philosophy" role="tab" aria-selected="false">Filosofi & Makna
+            Hidup</button>
+          <button class="modal-tab-btn" data-tab="craft" role="tab" aria-selected="false">Teknik Kriya
+            Tradisional</button>
+          <button class="modal-tab-btn" data-tab="unesco" role="tab" aria-selected="false">Status Pelestarian &
+            UNESCO</button>
+        </div>
+
+        <div class="modal-tab-panel active" id="tab-panel-history">
+          <p id="modal-history-text"></p>
+        </div>
+        <div class="modal-tab-panel" id="tab-panel-philosophy">
+          <p id="modal-phil-text"></p>
+        </div>
+        <div class="modal-tab-panel" id="tab-panel-craft">
+          <p id="modal-craft-text"></p>
+        </div>
+        <div class="modal-tab-panel" id="tab-panel-unesco">
+          <p id="modal-unesco-text"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="aksara-footer" role="contentinfo">
+    <div class="aksara-container">
+      <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+        <div>&copy; 2026 AKSARA Heritage Platform. TECHTOPIA Vol. 2 Web Design Competition.</div>
+        <a href="index.html" style="color: var(--accent-gold); font-weight: 600;">Kembali ke Beranda Utama &rarr;</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/cultural-data.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Initialize Fan Gallery
+      window.aksaraGallery = window.initAksaraGallery('fan-gallery-full');
+
+      // 2. Render Grid View Cards
+      const gridContainer = document.getElementById('gallery-grid-view');
+      const renderGrid = (items) => {
+        if (!gridContainer) return;
+        gridContainer.innerHTML = '';
+        items.forEach(c => {
+          const card = document.createElement('article');
+          card.className = 'grid-card';
+          card.innerHTML = `
+            <div class="grid-card-media">
+              <img src="${c.image}" alt="${c.name}" loading="lazy">
+            </div>
+            <div class="grid-card-body">
+              <span class="grid-card-cat">${c.categoryLabel}</span>
+              <h3 class="grid-card-title">${c.name}</h3>
+              <p class="grid-card-desc">${c.shortDesc}</p>
+              <div class="grid-card-foot">
+                <span>${c.regionLabel}</span>
+                <span style="display: inline-flex; align-items: center; gap: 4px;">Lihat Rincian &rarr;</span>
+              </div>
+            </div>
+          `;
+          card.addEventListener('click', () => {
+            if (window.aksaraApp && window.aksaraApp.openModal) {
+              window.aksaraApp.openModal(c.id);
+            }
+          });
+          gridContainer.appendChild(card);
+        });
+      };
+      renderGrid(AKSARA_CULTURES);
+
+      // 3. Dual-Mode Switcher
+      const fanViewEl = document.getElementById('gallery-fan-view');
+      const gridViewEl = document.getElementById('gallery-grid-view');
+      const fanModeBtn = document.getElementById('view-mode-fan');
+      const gridModeBtn = document.getElementById('view-mode-grid');
+
+      fanModeBtn.addEventListener('click', () => {
+        fanModeBtn.classList.add('active');
+        fanModeBtn.style.background = 'var(--bg-dark)';
+        fanModeBtn.style.color = 'var(--text-light)';
+
+        gridModeBtn.classList.remove('active');
+        gridModeBtn.style.background = 'none';
+        gridModeBtn.style.color = 'var(--text-primary)';
+
+        fanViewEl.style.display = 'block';
+        gridViewEl.style.display = 'none';
+      });
+
+      gridModeBtn.addEventListener('click', () => {
+        gridModeBtn.classList.add('active');
+        gridModeBtn.style.background = 'var(--bg-dark)';
+        gridModeBtn.style.color = 'var(--text-light)';
+
+        fanModeBtn.classList.remove('active');
+        fanModeBtn.style.background = 'none';
+        fanModeBtn.style.color = 'var(--text-primary)';
+
+        fanViewEl.style.display = 'none';
+        gridViewEl.style.display = 'grid';
+      });
+
+      // 4. Live Search Input
+      const searchInput = document.getElementById('gallery-search-input');
+      const noResultsEl = document.getElementById('search-no-results');
+
+      searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase().trim();
+        const matched = AKSARA_CULTURES.filter(c =>
+          c.name.toLowerCase().includes(query) ||
+          c.shortDesc.toLowerCase().includes(query) ||
+          c.regionLabel.toLowerCase().includes(query) ||
+          c.categoryLabel.toLowerCase().includes(query) ||
+          c.tags.some(t => t.toLowerCase().includes(query))
+        );
+
+        if (matched.length === 0) {
+          noResultsEl.style.display = 'block';
+          fanViewEl.style.display = 'none';
+          gridViewEl.style.display = 'none';
+        } else {
+          noResultsEl.style.display = 'none';
+          if (gridModeBtn.classList.contains('active')) {
+            gridViewEl.style.display = 'grid';
+            fanViewEl.style.display = 'none';
+          } else {
+            fanViewEl.style.display = 'block';
+            gridViewEl.style.display = 'none';
+          }
+          renderGrid(matched);
+          if (window.aksaraGallery) {
+            window.aksaraGallery.filteredData = matched;
+            window.aksaraGallery.activeIndex = 0;
+            window.aksaraGallery.render();
+          }
+        }
+      });
+
+      const urlParams = new URLSearchParams(window.location.search);
+      const catParam = urlParams.get('cat');
+      if (catParam) {
+        const targetBtn = document.querySelector(`.filter-btn[data-category="${catParam}"]`);
+        if (targetBtn) targetBtn.click();
+      }
+    });
+  </script>
+
+</body>
+
+</html>
